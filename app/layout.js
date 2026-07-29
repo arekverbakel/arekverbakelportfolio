@@ -1,0 +1,29 @@
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+// Inter, in de 3 gewichten die je gebruikt: Regular / Semi Bold / Bold
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-inter",
+});
+
+export const metadata = {
+  title: "Are Verbakel — Mediavormgever",
+  description:
+    "Portfolio van Are Verbakel, mediavormgever. Logo, branding, huisstijl, UX/UI en social content.",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="nl" className={inter.variable}>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
