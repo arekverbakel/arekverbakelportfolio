@@ -29,6 +29,7 @@
   font-weight: 700;
   line-height: 0.9;
   font-size: clamp(54px, calc(21.68px + 8.619vw), 132px);
+  text-align: right; /* laatste letter eindigt gelijk met GOEDE erboven */
 }
 
 .heroTitle span {
@@ -39,9 +40,7 @@
   .heroTitle {
     display: flex;
     flex-direction: column;
-  }
-  .heroMedia {
-    padding-left: 1.4em; /* zo staat MEDIA ingesprongen t.o.v. VORMGEVER in Figma */
+    align-items: flex-end;
   }
 }
 

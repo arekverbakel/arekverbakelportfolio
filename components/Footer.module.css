@@ -11,17 +11,17 @@
   overflow: hidden;
 }
 
-/* Groot watermerk, zit ACHTER de glas-blokken */
+/* Groot watermerk, zit ACHTER de glas-blokken, gecentreerd */
 .wordmark {
   position: absolute;
-  left: var(--section-padding-x);
+  left: 50%;
   top: 50%;
-  transform: translateY(-45%);
-  font-size: clamp(48px, 9vw, 128px);
+  transform: translate(-50%, -45%);
+  font-size: clamp(32px, 7vw, 100px);
   font-weight: 600;
-  line-height: 0.95;
+  letter-spacing: -0.05em;
+  line-height: 1;
   color: var(--color-darkest);
-  text-transform: none;
   z-index: 0;
   pointer-events: none;
   white-space: nowrap;
@@ -52,16 +52,16 @@
   grid-area: linkedin;
 }
 
-/* Bevroren glas-effect: blur + lichte tint over het watermerk */
+/* Bevroren glas-effect: subtiele waas + lichte tint, watermerk blijft zichtbaar */
 .glass {
   display: flex;
   align-items: flex-end;
   padding: var(--gap);
   border-radius: var(--radius);
-  background: rgba(217, 217, 217, 0.45);
-  backdrop-filter: blur(18px) saturate(120%);
-  -webkit-backdrop-filter: blur(18px) saturate(120%);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(217, 217, 217, 0.22);
+  backdrop-filter: blur(6px) saturate(140%);
+  -webkit-backdrop-filter: blur(6px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .glass span {

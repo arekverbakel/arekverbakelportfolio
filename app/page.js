@@ -8,14 +8,14 @@ const PROJECTS = [
     title: "SMART",
     label: "LOGO & HUISSTIJL 2026",
     tag: "LOGO, BRANDING, HUISSTIJL, UX, UI, SOCIAL CONTENT,",
-    image: "/images/project-smart.jpg", // = "SMART INSTA FOTO.png" uit Drive
+    image: "/images/project-smart.png", // = "SMART INSTA FOTO.png" uit Drive
   },
   {
     slug: "/project-2",
     title: "STUDIO GIFTIG",
     label: "PERSOONLIJK PROJECT 2026",
     tag: "STREEKTAART, ENZ.",
-    image: "/images/project-giftig.jpg", // = "HermanLaatsteFoto Portfolio.png" uit Drive
+    image: "/images/project-giftig.png", // = "HermanLaatsteFoto Portfolio.png" uit Drive
   },
 ];
 
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
 
         <h1 className={styles.heroTitle}>
-          <span className={styles.heroMedia}>MEDIA</span>
+          <span>MEDIA</span>
           <span>VORMGEVER</span>
         </h1>
       </section>
@@ -52,7 +52,7 @@ export default function Home() {
         <div className={styles.aboutPhoto}>
           {/* Vervang public/images/profile.jpg door je eigen foto in kleur —
               wordt hier automatisch zwart-wit via CSS grayscale. */}
-          <img src="/images/profile.jpg" alt="Arek Verbakel" />
+          <img src="/images/profile.png" alt="Arek Verbakel" />
         </div>
       </section>
 

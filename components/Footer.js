@@ -7,9 +7,7 @@ export default function Footer() {
       <div className={`container ${styles.wrap}`}>
         {/* Groot watermerk op de achtergrond, glas-blokken zweven erover */}
         <span className={styles.wordmark} aria-hidden="true">
-          Arek
-          <br />
-          Verbakel
+          ArekVerbakel
         </span>
 
         <div className={styles.grid}>
