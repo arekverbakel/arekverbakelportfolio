@@ -1,48 +1,78 @@
 /* ================= HERO ================= */
 .hero {
-  padding-top: var(--section-padding-y);
+  position: relative;
+  padding-top: 32px;
   padding-bottom: var(--section-padding-y);
+}
+
+/* Lichtgrijs paneel direct onder de header — leeg in het Figma-bestand,
+   dus hier ook leeg gelaten. Zet er evt. later zelf een beeld/graphic in. */
+.heroPanel {
+  width: 100%;
+  aspect-ratio: 1172 / 452;
+  background: var(--color-light);
+  border-radius: 0; /* bewust scherpe hoeken, staat zo in Figma */
+  margin-bottom: 48px;
+}
+
+.heroSpread {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(16px, calc(12.69px + 0.884vw), 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .heroTitle {
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 0.92;
-  font-size: clamp(48px, 9vw, 128px);
+  line-height: 0.9;
+  font-size: clamp(54px, calc(21.68px + 8.619vw), 132px);
 }
 
-.line {
-  display: block;
-}
-
-.mediaLine {
-  display: flex;
-  flex-direction: row;
-  gap: 0;
+.heroTitle span {
+  display: inline;
 }
 
 @media (max-width: 640px) {
-  .mediaLine {
+  .heroTitle {
+    display: flex;
     flex-direction: column;
+  }
+  .heroMedia {
+    padding-left: 1.4em; /* zo staat MEDIA ingesprongen t.o.v. VORMGEVER in Figma */
   }
 }
 
 /* ================= ABOUT / NAAST HET ONTWERPEN ================= */
 .about {
   display: grid;
-  grid-template-columns: minmax(220px, 360px) 1fr;
+  grid-template-columns: 1fr minmax(260px, 341px);
   gap: calc(var(--gap) * 2);
-  align-items: center;
+  align-items: start;
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
+}
+
+.aboutText h2 {
+  font-size: clamp(16px, calc(12.69px + 0.884vw), 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--gap);
+}
+
+.aboutText p {
+  font-size: clamp(32px, calc(22.47px + 2.541vw), 55px);
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .aboutPhoto {
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--color-light);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 341 / 506;
 }
 
 .aboutPhoto img {
@@ -51,20 +81,6 @@
   object-fit: cover;
   /* Foto staat in kleur geüpload, wordt hier zwart-wit weergegeven */
   filter: grayscale(100%);
-}
-
-.aboutText h2 {
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: var(--gap);
-}
-
-.aboutText p {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--color-dark);
-  max-width: 52ch;
 }
 
 @media (max-width: 640px) {
@@ -80,44 +96,39 @@
 
 .portfolioHeader {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: calc(var(--gap) * 2);
-  gap: var(--gap);
-  flex-wrap: wrap;
 }
 
-.portfolioHeader h2 {
-  font-size: clamp(28px, 4vw, 44px);
+.portfolioHeader h2,
+.year {
+  font-size: clamp(40px, calc(2.29px + 10.055vw), 131px);
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.year {
-  color: var(--color-dark);
-}
-
-.viewMore {
-  font-size: 15px;
-  font-weight: 600;
+  line-height: 1;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
+  margin-bottom: calc(var(--gap) * 2);
 }
 
 .card {
   display: block;
   border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--color-light);
+  background: var(--color-darkest);
+  padding: var(--gap) calc(var(--gap) * 2);
 }
 
 .cardImage {
-  aspect-ratio: 4 / 3;
-  background: var(--color-dark);
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 552 / 343;
+  margin: 0 calc(var(--gap) * -1) var(--gap);
+  margin-top: calc(var(--gap) * -1);
 }
 
 .cardImage img {
@@ -126,30 +137,29 @@
   object-fit: cover;
 }
 
-.cardBody {
-  padding: var(--gap);
-  background: var(--color-darkest);
+.cardTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
   color: var(--color-white);
-}
-
-.cardTag {
-  font-size: 11px;
+  font-size: clamp(14px, calc(11.51px + 0.663vw), 20px);
   font-weight: 600;
-  text-transform: uppercase;
-  color: var(--color-light);
   margin-bottom: 8px;
 }
 
-.cardBody h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 6px;
+.cardTag {
+  color: var(--color-light);
+  font-size: clamp(14px, calc(11.51px + 0.663vw), 20px);
+  font-weight: 400;
 }
 
-.cardTagline {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--color-light);
+.viewMore {
+  display: block;
+  text-align: center;
+  font-size: clamp(16px, calc(12.69px + 0.884vw), 24px);
+  font-weight: 600;
 }
 
 @media (max-width: 900px) {

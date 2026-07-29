@@ -1,36 +1,40 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
-const NAV_LINKS = [
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/over-mij", label: "Over mij" },
-  { href: "https://www.linkedin.com", label: "Linkedin" },
-];
-
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={`container ${styles.inner}`}>
-        <div className={styles.top}>
-          <span className={styles.logo}>Are Verbakel</span>
-          <Link href="/contact" className={styles.cta}>
-            Contact opnemen
+      <div className={`container ${styles.wrap}`}>
+        {/* Groot watermerk op de achtergrond, glas-blokken zweven erover */}
+        <span className={styles.wordmark} aria-hidden="true">
+          Arek
+          <br />
+          Verbakel
+        </span>
+
+        <div className={styles.grid}>
+          <Link href="/contact" className={`${styles.glass} ${styles.contact}`}>
+            <span>Contact</span>
+          </Link>
+          <Link
+            href="/portfolio"
+            className={`${styles.glass} ${styles.portfolio}`}
+          >
+            <span>Portfolio</span>
+          </Link>
+          <Link
+            href="/over-mij"
+            className={`${styles.glass} ${styles.overMij}`}
+          >
+            <span>Over mij</span>
+          </Link>
+          <Link
+            href="https://www.linkedin.com"
+            className={`${styles.glass} ${styles.linkedin}`}
+          >
+            <span>Linkedin</span>
           </Link>
         </div>
-
-        <nav className={styles.nav} aria-label="Footer menu">
-          <ul>
-            {NAV_LINKS.map((link) => (
-              <li key={link.label}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <p className={styles.copy}>
-          © {new Date().getFullYear()} Are Verbakel. Alle rechten voorbehouden.
-        </p>
       </div>
     </footer>
   );

@@ -1,64 +1,86 @@
 .footer {
-  background: var(--color-darkest);
-  color: var(--color-white);
+  background: var(--color-white);
   margin-top: var(--section-padding-y);
+  border-top: 1px solid var(--color-light);
 }
 
-.inner {
+.wrap {
+  position: relative;
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--gap) * 2);
+  overflow: hidden;
 }
 
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--gap);
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-white);
+/* Groot watermerk, zit ACHTER de glas-blokken */
+.wordmark {
+  position: absolute;
+  left: var(--section-padding-x);
+  top: 50%;
+  transform: translateY(-45%);
+  font-size: clamp(48px, 9vw, 128px);
+  font-weight: 600;
+  line-height: 0.95;
   color: var(--color-darkest);
-  font-size: 14px;
-  font-weight: 600;
-  padding: 12px 20px;
-  border-radius: var(--radius);
+  text-transform: none;
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
-.nav ul {
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: clamp(150px, 13vw, 175px) clamp(150px, 13vw, 175px);
+  grid-template-areas:
+    "contact portfolio portfolio"
+    "contact overmij   linkedin";
+  gap: var(--gap);
+}
+
+.contact {
+  grid-area: contact;
+}
+.portfolio {
+  grid-area: portfolio;
+}
+.overMij {
+  grid-area: overmij;
+}
+.linkedin {
+  grid-area: linkedin;
+}
+
+/* Bevroren glas-effect: blur + lichte tint over het watermerk */
+.glass {
   display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: var(--gap);
+  border-radius: var(--radius);
+  background: rgba(217, 217, 217, 0.45);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.nav a {
-  font-size: 15px;
+.glass span {
+  font-size: clamp(16px, 1.6vw, 24px);
   font-weight: 600;
-  color: var(--color-light);
-}
-
-.copy {
-  font-size: 13px;
-  color: var(--color-dark);
-  border-top: 1px solid var(--color-dark);
-  padding-top: var(--gap);
+  color: var(--color-darkest);
 }
 
 @media (max-width: 640px) {
-  .top {
-    flex-direction: column;
-    align-items: flex-start;
+  .wordmark {
+    top: 40%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 150px;
+    grid-template-areas:
+      "contact contact"
+      "portfolio portfolio"
+      "overmij linkedin";
   }
 }

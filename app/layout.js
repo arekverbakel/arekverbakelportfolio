@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Are Verbakel — Mediavormgever",
+  title: "Arek Verbakel — Mediavormgever",
   description:
-    "Portfolio van Are Verbakel, mediavormgever. Logo, branding, huisstijl, UX/UI en social content.",
+    "Portfolio van Arek Verbakel, mediavormgever. Logo, branding, huisstijl, UX/UI en social content.",
 };
 
 export default function RootLayout({ children }) {
