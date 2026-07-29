@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 // Inter, in de 3 gewichten die je gebruikt: Regular / Semi Bold / Bold
 const inter = Inter({
@@ -21,8 +22,10 @@ export default function RootLayout({ children }) {
     <html lang="nl" className={inter.variable}>
       <body>
         <Header />
-        <main>{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <main>{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

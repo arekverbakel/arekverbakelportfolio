@@ -29,6 +29,7 @@
   font-weight: 700;
   line-height: 0.9;
   font-size: clamp(54px, calc(21.68px + 8.619vw), 132px);
+  letter-spacing: -0.05em;
   text-align: right; /* laatste letter eindigt gelijk met GOEDE erboven */
 }
 
@@ -41,6 +42,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+  }
+  .heroMedia {
+    align-self: center; /* alleen "MEDIA" gecentreerd op tel */
   }
 }
 
@@ -55,16 +59,24 @@
 }
 
 .aboutText h2 {
-  font-size: clamp(16px, calc(12.69px + 0.884vw), 24px);
+  font-size: 24px;
   font-weight: 600;
-  text-transform: uppercase;
   margin-bottom: var(--gap);
 }
 
 .aboutText p {
-  font-size: clamp(32px, calc(22.47px + 2.541vw), 55px);
+  font-size: 55px;
   font-weight: 600;
   line-height: 1.15;
+}
+
+@media (max-width: 640px) {
+  .aboutText h2 {
+    font-size: 16px;
+  }
+  .aboutText p {
+    font-size: 32px;
+  }
 }
 
 .aboutPhoto {
@@ -97,15 +109,23 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: calc(var(--gap) * 2);
+  margin-bottom: var(--gap);
 }
 
 .portfolioHeader h2,
 .year {
-  font-size: clamp(40px, calc(2.29px + 10.055vw), 131px);
+  font-size: 131px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: -0.05em;
   line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .portfolioHeader h2,
+  .year {
+    font-size: 40px;
+  }
 }
 
 .grid {

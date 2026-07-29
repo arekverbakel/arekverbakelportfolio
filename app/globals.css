@@ -36,8 +36,21 @@ html,
 body {
   background: var(--color-white);
   color: var(--color-darkest);
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Vereist door GSAP ScrollSmoother */
+#smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
 }
 
 body {

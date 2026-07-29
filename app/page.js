@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SplitReveal from "@/components/SplitReveal";
 import styles from "./Home.module.css";
 
 // Precies 2 kaarten op de homepage — zo staat het ook in Figma.
@@ -33,7 +34,7 @@ export default function Home() {
         </div>
 
         <h1 className={styles.heroTitle}>
-          <span>MEDIA</span>
+          <span className={styles.heroMedia}>MEDIA</span>
           <span>VORMGEVER</span>
         </h1>
       </section>
@@ -41,13 +42,13 @@ export default function Home() {
       {/* ---------- NAAST HET ONTWERPEN ---------- */}
       <section className={`container ${styles.about}`}>
         <div className={styles.aboutText}>
-          <h2>NAAST HET ONTWERPEN</h2>
-          <p>
+          <SplitReveal as="h2">Naast het ontwerpen</SplitReveal>
+          <SplitReveal as="p">
             Buiten het ontwerpen om vind je me vaak in de sportschool.
             Daarnaast ben ik altijd wel aan het creëren, of dat nu digitaal is
             of op papier. ik ben altijd op zoek naar nieuwe vormen en ideeën
             om mijn werk sterker te maken.
-          </p>
+          </SplitReveal>
         </div>
         <div className={styles.aboutPhoto}>
           {/* Vervang public/images/profile.jpg door je eigen foto in kleur —
@@ -59,8 +60,10 @@ export default function Home() {
       {/* ---------- PORTFOLIO PREVIEW ---------- */}
       <section className={`container ${styles.portfolio}`}>
         <div className={styles.portfolioHeader}>
-          <h2>PORTFOLIO</h2>
-          <span className={styles.year}>&apos;26</span>
+          <SplitReveal as="h2">PORTFOLIO</SplitReveal>
+          <SplitReveal as="span" className={styles.year}>
+            &apos;26
+          </SplitReveal>
         </div>
 
         <div className={styles.grid}>
@@ -83,7 +86,7 @@ export default function Home() {
         </div>
 
         <Link href="/portfolio" className={styles.viewMore}>
-          Bekijk meer →
+          <SplitReveal as="span">Bekijk meer →</SplitReveal>
         </Link>
       </section>
     </>

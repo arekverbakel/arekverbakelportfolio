@@ -5,7 +5,7 @@
   right: 0;
   z-index: 50;
   width: 100%;
-  background: var(--color-white);
+  background: transparent;
 }
 
 .inner {
@@ -48,6 +48,10 @@
 }
 
 @media (max-width: 640px) {
+  .header {
+    background: var(--color-white);
+  }
+
   .inner {
     height: 71px;
   }

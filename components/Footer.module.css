@@ -1,13 +1,12 @@
 .footer {
   background: var(--color-white);
   margin-top: var(--section-padding-y);
-  border-top: 1px solid var(--color-light);
 }
 
 .wrap {
   position: relative;
   padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
+  padding-bottom: calc(var(--section-padding-y) * 0.5);
   overflow: hidden;
 }
 
@@ -25,6 +24,10 @@
   z-index: 0;
   pointer-events: none;
   white-space: nowrap;
+}
+
+.wordmarkLine {
+  display: inline;
 }
 
 .grid {
@@ -73,6 +76,16 @@
 @media (max-width: 640px) {
   .wordmark {
     top: 40%;
+    font-size: clamp(40px, 12vw, 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: normal;
+  }
+
+  .wordmarkLine {
+    display: block;
+    text-align: center;
   }
 
   .grid {
