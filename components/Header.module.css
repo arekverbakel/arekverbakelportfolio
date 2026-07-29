@@ -48,10 +48,6 @@
 }
 
 @media (max-width: 640px) {
-  .header {
-    background: var(--color-white);
-  }
-
   .inner {
     height: 71px;
   }

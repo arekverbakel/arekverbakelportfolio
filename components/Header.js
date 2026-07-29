@@ -27,7 +27,7 @@ export default function Header() {
       .from(el, {
         yPercent: -100,
         paused: true,
-        duration: 0.3,
+        duration: 0.6,
         ease: "power2.out",
       })
       .progress(1);

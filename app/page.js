@@ -34,8 +34,10 @@ export default function Home() {
         </div>
 
         <h1 className={styles.heroTitle}>
-          <span className={styles.heroMedia}>MEDIA</span>
-          <span>VORMGEVER</span>
+          <SplitReveal as="span" className={styles.heroMedia}>
+            MEDIA
+          </SplitReveal>
+          <SplitReveal as="span">VORMGEVER</SplitReveal>
         </h1>
       </section>
 
