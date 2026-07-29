@@ -31,6 +31,7 @@
   font-size: clamp(54px, calc(21.68px + 8.619vw), 132px);
   letter-spacing: -0.05em;
   text-align: right; /* laatste letter eindigt gelijk met GOEDE erboven */
+  margin-right: -0.015em; /* klein beetje naar links t.o.v. GOEDE */
 }
 
 .heroTitle span {
@@ -180,6 +181,7 @@
 .viewMore {
   display: block;
   text-align: center;
+  margin-top: var(--gap);
   font-size: clamp(16px, calc(12.69px + 0.884vw), 24px);
   font-weight: 600;
 }

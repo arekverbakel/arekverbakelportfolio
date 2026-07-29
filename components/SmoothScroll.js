@@ -17,7 +17,6 @@ export default function SmoothScroll({ children }) {
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
       smooth: 1.2,
-      smoothTouch: 0.1, // lichte smoothing op mobiel/tablet, voelt anders niet sponzig aan
       effects: true,
     });
     return () => smoother.kill();
