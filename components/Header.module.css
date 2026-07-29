@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
   background: var(--color-white);
 }
 
@@ -10,10 +16,22 @@
   height: 100px;
 }
 
-.text {
-  font-size: clamp(16px, 1.1vw, 20px);
+.textBlock {
+  line-height: 1.3;
+}
+
+.label,
+.value {
+  font-size: clamp(16px, calc(14.34px + 0.442vw), 20px);
   font-weight: 600;
-  line-height: 1.2;
+}
+
+.label {
+  color: #171717;
+}
+
+.value {
+  color: #d9d9d9;
 }
 
 .cta {
@@ -22,7 +40,7 @@
   justify-content: center;
   background: var(--color-darkest);
   color: var(--color-white);
-  font-size: clamp(16px, 1.1vw, 20px);
+  font-size: clamp(16px, calc(14.34px + 0.442vw), 20px);
   font-weight: 600;
   padding: 13px 24px;
   border-radius: 25px; /* pil-vorm, zoals in Figma */

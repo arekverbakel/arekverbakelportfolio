@@ -87,6 +87,16 @@ ul {
   padding-right: var(--section-padding-x);
 }
 
+main {
+  padding-top: 100px;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-top: 71px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
