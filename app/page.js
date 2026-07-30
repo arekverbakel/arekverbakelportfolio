@@ -1,24 +1,12 @@
 import Link from "next/link";
 import SplitReveal from "@/components/SplitReveal";
+import ProjectCard from "@/components/ProjectCard";
+import { PROJECTS } from "@/lib/projects";
 import styles from "./Home.module.css";
 
-// Precies 2 kaarten op de homepage — zo staat het ook in Figma.
-const PROJECTS = [
-  {
-    slug: "/project-1",
-    title: "SMART",
-    label: "LOGO & HUISSTIJL 2026",
-    tag: "LOGO, BRANDING, HUISSTIJL, UX, UI, SOCIAL CONTENT,",
-    image: "/images/project-smart.png", // = "SMART INSTA FOTO.png" uit Drive
-  },
-  {
-    slug: "/project-2",
-    title: "STUDIO GIFTIG",
-    label: "PERSOONLIJK PROJECT 2026",
-    tag: "STREEKTAART, ENZ.",
-    image: "/images/project-giftig.png", // = "HermanLaatsteFoto Portfolio.png" uit Drive
-  },
-];
+// Homepage toont alleen de eerste 2 projecten (zo staat het in Figma) —
+// de volledige lijst (incl. "meer binnenkort") staat op /portfolio.
+const PREVIEW_PROJECTS = PROJECTS.slice(0, 2);
 
 export default function Home() {
   return (
@@ -51,7 +39,7 @@ export default function Home() {
           </SplitReveal>
         </div>
         <div className={styles.aboutPhoto}>
-          {/* Vervang public/images/profile.jpg door je eigen foto in kleur —
+          {/* Vervang public/images/profile.png door je eigen foto in kleur —
               wordt hier automatisch zwart-wit via CSS grayscale. */}
           <img src="/images/profile.png" alt="Arek Verbakel" />
         </div>
@@ -67,21 +55,8 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          {PROJECTS.map((project) => (
-            <Link
-              href={project.slug}
-              key={project.title}
-              className={styles.card}
-            >
-              <div className={styles.cardImage}>
-                <img src={project.image} alt={project.title} />
-              </div>
-              <div className={styles.cardTitleRow}>
-                <span>{project.title}</span>
-                <span>{project.label}</span>
-              </div>
-              <p className={styles.cardTag}>{project.tag}</p>
-            </Link>
+          {PREVIEW_PROJECTS.map((project) => (
+            <ProjectCard project={project} key={project.title} />
           ))}
         </div>
 

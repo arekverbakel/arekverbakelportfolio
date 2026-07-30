@@ -136,47 +136,7 @@
   margin-bottom: calc(var(--gap) * 2);
 }
 
-.card {
-  display: block;
-  border-radius: var(--radius);
-  background: var(--color-darkest);
-  padding: var(--gap);
-}
 
-.cardImage {
-  border-radius: var(--radius);
-  overflow: hidden;
-  aspect-ratio: 552 / 343;
-  margin-bottom: var(--gap);
-}
-
-.cardImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.cardTitleRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding-left: var(--gap);
-  padding-right: var(--gap);
-  color: var(--color-white);
-  font-size: clamp(14px, calc(11.51px + 0.663vw), 20px);
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.cardTag {
-  padding-left: var(--gap);
-  padding-right: var(--gap);
-  color: var(--color-light);
-  font-size: clamp(14px, calc(11.51px + 0.663vw), 20px);
-  font-weight: 400;
-}
 
 .viewMore {
   display: block;
