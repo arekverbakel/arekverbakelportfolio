@@ -3,60 +3,64 @@
   padding-bottom: var(--section-padding-y);
 }
 
-.intro {
-  max-width: 900px;
-  margin-bottom: calc(var(--gap) * 2);
+/* ---------- Donker paneel: titel + meta + grijs paneel ---------- */
+.dark {
+  background: #171717;
+  border-radius: var(--radius);
+  padding: 48px var(--gap) var(--gap);
 }
 
-.eyebrow {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-dark);
-  margin-bottom: 8px;
-}
-
-.intro h1 {
-  font-size: clamp(54px, 9vw, 100px);
+.title {
+  text-align: center;
+  color: var(--color-white);
+  font-size: 131px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.05em;
-  line-height: 1;
+  margin-bottom: 56px;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 150px 300px 1fr;
+  gap: var(--gap);
+  padding: 0 var(--gap);
   margin-bottom: var(--gap);
 }
 
-.intake {
-  font-size: clamp(20px, 2.4vw, 28px);
+.metaLabel {
+  color: var(--color-white);
+  font-size: 20px;
   font-weight: 600;
-  line-height: 1.3;
-  color: var(--color-dark);
+  margin-bottom: 8px;
 }
 
-.hero {
+.metaYear {
+  color: var(--color-white);
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.metaValue {
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ---------- Grijs paneel met de afbeeldingen ---------- */
+.panel {
+  background: #262626;
   border-radius: var(--radius);
-  overflow: hidden;
-  margin-bottom: calc(var(--section-padding-y) * 0.6);
-}
-
-.hero img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.section {
-  margin-bottom: calc(var(--section-padding-y) * 0.6);
-}
-
-.section h2 {
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 700;
-  margin-bottom: var(--gap);
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
 }
 
 .imageBlock {
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--color-light);
 }
 
 .imageBlock img {
@@ -70,4 +74,29 @@
   font-size: clamp(16px, 1.6vw, 24px);
   font-weight: 600;
   margin-top: calc(var(--gap) * 2);
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 54px;
+    margin-bottom: 32px;
+  }
+
+  .meta {
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+  }
+
+  .metaLabel {
+    font-size: 16px;
+  }
+
+  .metaYear {
+    font-size: 40px;
+  }
+
+  .metaValue {
+    font-size: 14px;
+  }
 }

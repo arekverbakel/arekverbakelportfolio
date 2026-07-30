@@ -8,67 +8,82 @@ export const metadata = {
 
 export default function SmartProject() {
   return (
-    <article className={`container ${styles.wrap}`}>
-      {/* ---------- INTRO ---------- */}
-      <header className={styles.intro}>
-        <SplitReveal as="p" className={styles.eyebrow}>
-          LOGO & HUISSTIJL 2026
-        </SplitReveal>
-        <SplitReveal as="h1">SMART</SplitReveal>
-        <SplitReveal as="p" className={styles.intake}>
-          Verbinden met. De juiste mensen. SMART helpt bedrijven communiceren
-          met hun droomklanten — de huisstijl vertaalt dat idee letterlijk:
-          een tekstballon verwerkt in de negatieve ruimte van het logo, met
-          dezelfde scherpe hoek terug in de letters zelf.
-        </SplitReveal>
-      </header>
+    <>
+      <article className={`container ${styles.wrap}`}>
+        <div className={styles.dark}>
+          <SplitReveal as="h1" className={styles.title}>
+            SMART
+          </SplitReveal>
 
-      {/* ---------- HERO POSTER ---------- */}
-      <div className={styles.hero}>
-        <img src="/images/smart-poster.png" alt="SMART campagneposter" />
-      </div>
+          <div className={styles.meta}>
+            <div className={styles.metaCol}>
+              <SplitReveal as="p" className={styles.metaLabel}>
+                Jaar
+              </SplitReveal>
+              <SplitReveal as="p" className={styles.metaYear}>
+                2026
+              </SplitReveal>
+            </div>
 
-      {/* ---------- KLEUREN ---------- */}
-      <section className={styles.section}>
-        <SplitReveal as="h2">Kleuren</SplitReveal>
-        <div className={styles.imageBlock}>
-          <img src="/images/smart-colors.png" alt="SMART kleurenpalet" />
+            <div className={styles.metaCol}>
+              <SplitReveal as="p" className={styles.metaLabel}>
+                Diensten
+              </SplitReveal>
+              <SplitReveal as="p" className={styles.metaValue}>
+                Logo, huisstijl, social content
+              </SplitReveal>
+            </div>
+
+            <div className={styles.metaCol}>
+              <SplitReveal as="p" className={styles.metaLabel}>
+                Samenvatting
+              </SplitReveal>
+              <SplitReveal as="p" className={styles.metaValue}>
+                Smart is een marketing consultant die ondernemers helpt om op
+                een slimme, authentieke en effectieve manier zichtbaar te
+                worden op social media. Voor dit merk ontwikkelde ik een
+                complete visuele identiteit die professionaliteit uitstraalt
+                zonder afstandelijk te worden. Het ontwerp is helder, modern
+                en vriendelijk precies zoals Smart zelf opereert:
+                strategisch sterk, maar altijd persoonlijk.
+              </SplitReveal>
+            </div>
+          </div>
+
+          <div className={styles.panel}>
+            <div className={styles.imageBlock}>
+              <img src="/images/smart-poster.png" alt="SMART campagneposter" />
+            </div>
+            <div className={styles.imageBlock}>
+              <img
+                src="/images/smart-logo-guide.png"
+                alt="SMART logo-richtlijnen"
+              />
+            </div>
+            <div className={styles.imageBlock}>
+              <img src="/images/smart-colors.png" alt="SMART kleurenpalet" />
+            </div>
+            <div className={styles.imageBlock}>
+              <img
+                src="/images/smart-typography.png"
+                alt="SMART lettertypes"
+              />
+            </div>
+            <div className={styles.imageBlock}>
+              <img
+                src="/images/smart-moodboard.png"
+                alt="SMART moodboard en symbolen"
+              />
+            </div>
+            {/* Ontbreekt nog: SMART TEMPLATE IPHONE — stuur die foto nog
+                even mee, dan zet ik 'm hier neer. */}
+          </div>
         </div>
-      </section>
-
-      {/* ---------- TYPOGRAFIE ---------- */}
-      <section className={styles.section}>
-        <SplitReveal as="h2">Typografie</SplitReveal>
-        <div className={styles.imageBlock}>
-          <img
-            src="/images/smart-typography.png"
-            alt="SMART lettertypes: Nethead, Panel Sans, Input Serif"
-          />
-        </div>
-      </section>
-
-      {/* ---------- LOGO ---------- */}
-      <section className={styles.section}>
-        <SplitReveal as="h2">Logo & beeldmerk</SplitReveal>
-        <div className={styles.imageBlock}>
-          <img src="/images/smart-logo-guide.png" alt="SMART logo-richtlijnen" />
-        </div>
-      </section>
-
-      {/* ---------- MOODBOARD ---------- */}
-      <section className={styles.section}>
-        <SplitReveal as="h2">Moodboard & symbolen</SplitReveal>
-        <div className={styles.imageBlock}>
-          <img
-            src="/images/smart-moodboard.png"
-            alt="SMART moodboard en symbolen"
-          />
-        </div>
-      </section>
+      </article>
 
       <TransitionLink href="/portfolio" className={styles.back}>
         <SplitReveal as="span">Terug naar portfolio →</SplitReveal>
       </TransitionLink>
-    </article>
+    </>
   );
 }
