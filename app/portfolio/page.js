@@ -1,5 +1,5 @@
-import Link from "next/link";
 import SplitReveal from "@/components/SplitReveal";
+import TransitionLink from "@/components/TransitionLink";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/projects";
 import styles from "./Portfolio.module.css";
@@ -31,9 +31,9 @@ export default function PortfolioPage() {
         </div>
       </div>
 
-      <Link href="/" className={styles.back}>
+      <TransitionLink href="/" className={styles.back}>
         <SplitReveal as="span">Terug naar home →</SplitReveal>
-      </Link>
+      </TransitionLink>
     </section>
   );
 }

@@ -12,21 +12,22 @@ export default function Footer() {
         </span>
 
         <div className={styles.grid}>
-          <Link href="/contact" className={`${styles.glass} ${styles.contact}`}>
+          <TransitionLink href="/contact" className={`${styles.glass} ${styles.contact}`}>
             <span>Contact</span>
-          </Link>
+          </TransitionLink>
           <TransitionLink
             href="/portfolio"
             className={`${styles.glass} ${styles.portfolio}`}
           >
             <span>Portfolio</span>
           </TransitionLink>
-          <Link
+          <TransitionLink
             href="/over-mij"
             className={`${styles.glass} ${styles.overMij}`}
           >
             <span>Over mij</span>
-          </Link>
+          </TransitionLink>
+          {/* Linkedin is extern, geen paginatransitie nodig */}
           <Link
             href="https://www.linkedin.com"
             className={`${styles.glass} ${styles.linkedin}`}
