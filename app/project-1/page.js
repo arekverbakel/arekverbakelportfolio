@@ -77,8 +77,12 @@ export default function SmartProject() {
                 alt="SMART moodboard en symbolen"
               />
             </div>
-            {/* Ontbreekt nog: SMART TEMPLATE IPHONE — stuur die foto nog
-                even mee, dan zet ik 'm hier neer. */}
+            <div className={styles.imageBlock}>
+              <img
+                src="/images/smart-iphone-template.png"
+                alt="SMART iPhone template mockups"
+              />
+            </div>
           </div>
         </div>
       </article>
