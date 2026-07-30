@@ -103,7 +103,7 @@
 
 /* ================= PORTFOLIO PREVIEW ================= */
 .portfolio {
-  padding-bottom: var(--section-padding-y);
+  padding-bottom: 0;
 }
 
 .portfolioHeader {
@@ -133,15 +133,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
-  margin-bottom: calc(var(--gap) * 2);
 }
-
-
 
 .viewMore {
   display: block;
   text-align: center;
-  margin-top: var(--gap);
+  margin-top: calc(var(--gap) * 2);
+  margin-bottom: calc(var(--gap) * 2);
   font-size: clamp(16px, calc(12.69px + 0.884vw), 24px);
   font-weight: 600;
 }

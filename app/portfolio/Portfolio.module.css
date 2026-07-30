@@ -4,14 +4,14 @@
 }
 
 .header {
-  margin-bottom: var(--gap);
+  margin-bottom: 8px;
 }
 
 .range {
   display: block;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .headerText {

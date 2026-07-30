@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TransitionLink from "./TransitionLink";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -14,12 +15,12 @@ export default function Footer() {
           <Link href="/contact" className={`${styles.glass} ${styles.contact}`}>
             <span>Contact</span>
           </Link>
-          <Link
+          <TransitionLink
             href="/portfolio"
             className={`${styles.glass} ${styles.portfolio}`}
           >
             <span>Portfolio</span>
-          </Link>
+          </TransitionLink>
           <Link
             href="/over-mij"
             className={`${styles.glass} ${styles.overMij}`}

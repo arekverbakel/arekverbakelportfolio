@@ -102,6 +102,7 @@ ul {
 
 main {
   padding-top: 100px;
+  display: flow-root; /* voorkomt dat marges van de laatste sectie 'lekken' naar de footer */
 }
 
 @media (max-width: 640px) {

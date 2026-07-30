@@ -1,5 +1,5 @@
-import Link from "next/link";
 import SplitReveal from "@/components/SplitReveal";
+import TransitionLink from "@/components/TransitionLink";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/projects";
 import styles from "./Home.module.css";
@@ -60,9 +60,9 @@ export default function Home() {
           ))}
         </div>
 
-        <Link href="/portfolio" className={styles.viewMore}>
+        <TransitionLink href="/portfolio" className={styles.viewMore}>
           <SplitReveal as="span">Bekijk meer →</SplitReveal>
-        </Link>
+        </TransitionLink>
       </section>
     </>
   );

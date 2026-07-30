@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import PageTransition from "@/components/PageTransition";
 
 // Inter, in de 3 gewichten die je gebruikt: Regular / Semi Bold / Bold
 const inter = Inter({
@@ -21,11 +22,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="nl" className={inter.variable}>
       <body>
-        <Header />
-        <SmoothScroll>
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <PageTransition>
+          <Header />
+          <SmoothScroll>
+            <main>{children}</main>
+            <Footer />
+          </SmoothScroll>
+        </PageTransition>
       </body>
     </html>
   );
