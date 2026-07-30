@@ -47,10 +47,18 @@
   color: var(--color-white);
   font-size: 55px;
   font-weight: 600;
+  letter-spacing: -0.05em;
 }
 
 .metaValue {
   color: var(--color-white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.metaSummary {
+  color: #d9d9d9;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
@@ -94,7 +102,8 @@
     font-size: 40px;
   }
 
-  .metaValue {
+  .metaValue,
+  .metaSummary {
     font-size: 14px;
   }
 }

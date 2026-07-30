@@ -41,7 +41,7 @@ export default function SmartProject() {
                 <SplitReveal as="p" className={styles.metaLabel}>
                   Samenvatting
                 </SplitReveal>
-                <SplitReveal as="p" className={styles.metaValue}>
+              <SplitReveal as="p" className={styles.metaSummary}>
                   Smart is een marketing consultant die ondernemers helpt om
                   op een slimme, authentieke en effectieve manier zichtbaar
                   te worden op social media. Voor dit merk ontwikkelde ik een
