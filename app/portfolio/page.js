@@ -12,27 +12,27 @@ export default function PortfolioPage() {
   return (
     <section className={`container ${styles.wrap}`}>
       <div className={styles.header}>
+        <SplitReveal as="p" className={styles.range}>
+          [2024-2026]
+        </SplitReveal>
         <div className={styles.headerText}>
           <SplitReveal as="h1">PORTFOLIO</SplitReveal>
           <SplitReveal as="span" className={styles.year}>
             &apos;26
           </SplitReveal>
         </div>
-        <SplitReveal as="p" className={styles.range}>
-          [2024-2026]
-        </SplitReveal>
       </div>
 
       <div className={styles.panel}>
         <div className={styles.grid}>
           {PROJECTS.map((project) => (
-            <ProjectCard project={project} key={project.title} />
+            <ProjectCard project={project} key={project.slug} />
           ))}
         </div>
       </div>
 
       <Link href="/" className={styles.back}>
-        Terug naar home →
+        <SplitReveal as="span">Terug naar home →</SplitReveal>
       </Link>
     </section>
   );
