@@ -39,9 +39,9 @@ export default function SplitReveal({ as: Tag = "div", className, children }) {
     const anim = gsap.from(split.lines, {
       yPercent: 110,
       opacity: 0,
-      duration: 1.2,
-      ease: "power3.out",
-      stagger: 0.14,
+      duration: 0.9,
+      ease: "power4.out",
+      stagger: 0.09,
       scrollTrigger: {
         trigger: el,
         start: "top 85%",

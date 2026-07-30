@@ -1,13 +1,13 @@
 .wrap {
-  padding-top: 48px;
+  padding-top: 8px; /* zwarte blok dicht tegen de header */
   padding-bottom: var(--section-padding-y);
 }
 
-/* ---------- Donker paneel: titel + meta + grijs paneel ---------- */
+/* ---------- Donker paneel: alleen de titel + het grijze paneel ---------- */
 .dark {
   background: #171717;
   border-radius: var(--radius);
-  padding: 48px var(--gap) var(--gap);
+  padding: 32px var(--gap) var(--gap);
 }
 
 .title {
@@ -17,19 +17,27 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.05em;
-  margin-bottom: 56px;
+  margin-bottom: var(--gap);
+}
+
+/* ---------- Grijs paneel: metablok + alle afbeeldingen ---------- */
+.panel {
+  background: #262626;
+  border-radius: var(--radius);
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
 }
 
 .meta {
   display: grid;
   grid-template-columns: 150px 300px 1fr;
   gap: var(--gap);
-  padding: 0 var(--gap);
-  margin-bottom: var(--gap);
 }
 
 .metaLabel {
-  color: var(--color-white);
+  color: #d9d9d9;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;
@@ -46,16 +54,6 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
-}
-
-/* ---------- Grijs paneel met de afbeeldingen ---------- */
-.panel {
-  background: #262626;
-  border-radius: var(--radius);
-  padding: var(--gap);
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
 }
 
 .imageBlock {
@@ -80,7 +78,7 @@
 @media (max-width: 640px) {
   .title {
     font-size: 54px;
-    margin-bottom: 32px;
+    margin-bottom: calc(var(--gap) / 1.5);
   }
 
   .meta {
