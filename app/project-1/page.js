@@ -54,7 +54,7 @@ export default function SmartProject() {
             </div>
 
             <div className={styles.imageBlock}>
-              <img src="/images/smart-poster.png" alt="SMART campagneposter" />
+              <img src="/images/smart-poster.jpg" alt="SMART campagneposter" />
             </div>
             <div className={styles.imageBlock}>
               <img

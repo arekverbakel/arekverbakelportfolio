@@ -39,9 +39,9 @@ export default function Home() {
           </SplitReveal>
         </div>
         <div className={styles.aboutPhoto}>
-          {/* Vervang public/images/profile.png door je eigen foto in kleur —
+          {/* Vervang public/images/profile.jpg door je eigen foto in kleur —
               wordt hier automatisch zwart-wit via CSS grayscale. */}
-          <img src="/images/profile.png" alt="Arek Verbakel" />
+          <img src="/images/profile.jpg" alt="Arek Verbakel" />
         </div>
       </section>
 
