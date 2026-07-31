@@ -58,7 +58,11 @@ export default function Header() {
           <p className={styles.label}>Beschikbaar als freelancer</p>
           <p className={styles.value}>vanaf september 2026</p>
         </div>
-        <MagneticButton href="/contact" className={styles.cta} strength={0.4}>
+        <MagneticButton
+          href="mailto:arekverbakelbusiness@gmail.com"
+          className={styles.cta}
+          strength={0.4}
+        >
           Contact opnemen
         </MagneticButton>
       </div>

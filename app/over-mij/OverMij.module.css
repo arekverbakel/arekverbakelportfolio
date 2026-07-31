@@ -1,0 +1,229 @@
+/* ================= ABOUT (zelfde patroon als homepage) ================= */
+.about {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 341px);
+  gap: calc(var(--gap) * 2);
+  align-items: start;
+  padding-top: 48px;
+  padding-bottom: var(--section-padding-y);
+}
+
+.aboutText h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: var(--gap);
+}
+
+.aboutText p {
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.aboutPhoto {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-light);
+  aspect-ratio: 341 / 506;
+}
+
+.aboutPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+@media (max-width: 640px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .aboutText h2 {
+    font-size: 16px;
+  }
+  .aboutText p {
+    font-size: 32px;
+  }
+}
+
+/* ================= ERVARINGEN ================= */
+.experienceWrap {
+  padding-bottom: var(--section-padding-y);
+}
+
+.dark {
+  background: #171717;
+  border-radius: var(--radius);
+  padding: 32px var(--gap) var(--gap);
+}
+
+.ervaringenTitle {
+  color: var(--color-white);
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin-bottom: var(--gap);
+}
+
+.panel {
+  background: #262626;
+  border-radius: var(--radius);
+  padding: 0 var(--gap);
+}
+
+.row {
+  padding: var(--gap) 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.row:first-child {
+  border-top: 2px solid #d9d9d9;
+}
+
+.rowTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--gap);
+}
+
+.rowTitle {
+  color: var(--color-white);
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.rowPeriod {
+  color: var(--color-white);
+  font-size: 32px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.rowRole {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.rowDescription {
+  color: #d9d9d9;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 480px;
+}
+
+@media (max-width: 640px) {
+  .ervaringenTitle {
+    font-size: 40px;
+  }
+  .rowTitle,
+  .rowPeriod {
+    font-size: 16px;
+  }
+  .rowRole {
+    font-size: 12px;
+  }
+  .rowDescription {
+    font-size: 14px;
+  }
+}
+
+/* ================= PORTFOLIO PREVIEW ================= */
+.portfolio {
+  padding-bottom: var(--section-padding-y);
+}
+
+.range {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-darkest);
+}
+
+.portfolioHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: -0.1em;
+  margin-bottom: var(--gap);
+}
+
+.portfolioHeader h2,
+.year {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--color-darkest);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+@media (max-width: 640px) {
+  .range {
+    font-size: 16px;
+  }
+  .portfolioHeader h2,
+  .year {
+    font-size: 40px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 641px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= SAMENWERKEN? ================= */
+.cta {
+  padding-bottom: var(--section-padding-y);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.ctaTitle {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: var(--color-darkest);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-darkest);
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 28px;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .ctaTitle {
+    font-size: 40px;
+  }
+  .ctaButton {
+    font-size: 16px;
+    padding: 13px 22px;
+  }
+}

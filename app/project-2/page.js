@@ -7,14 +7,14 @@ export const metadata = {
 };
 
 const GALLERY = [
-  { src: "/images/herman-voorbeeld-studio.jpg", alt: "Herman — studio, aan het werk" },
-  { src: "/images/herman-schets-1.jpg", alt: "Herman — schets 1" },
-  { src: "/images/herman-schets-2.jpg", alt: "Herman — schets 2" },
-  { src: "/images/herman-schets-3.jpg", alt: "Herman — schets 3" },
-  { src: "/images/herman-schets-4.jpg", alt: "Herman — schets 4" },
-  { src: "/images/herman-schets-5.jpg", alt: "Herman — schets 5" },
-  { src: "/images/herman-schets-6.jpg", alt: "Herman — schets 6" },
-  { src: "/images/herman-schets-8.jpg", alt: "Herman — schets 8" },
+  { src: "/images/herman-voorbeeld-studio.png", alt: "Herman — studio, aan het werk" },
+  { src: "/images/herman-schets-1.png", alt: "Herman — schets 1" },
+  { src: "/images/herman-schets-2.png", alt: "Herman — schets 2" },
+  { src: "/images/herman-schets-3.png", alt: "Herman — schets 3" },
+  { src: "/images/herman-schets-4.png", alt: "Herman — schets 4" },
+  { src: "/images/herman-schets-5.png", alt: "Herman — schets 5" },
+  { src: "/images/herman-schets-6.png", alt: "Herman — schets 6" },
+  { src: "/images/herman-schets-8.png", alt: "Herman — schets 8" },
 ];
 
 export default function HermanProject() {
@@ -71,7 +71,7 @@ export default function HermanProject() {
 
             <div className={styles.imageBlock}>
               <img
-                src="/images/herman-laatste-foto.jpg"
+                src="/images/herman-laatste-foto.png"
                 alt="Herman — eindresultaat"
               />
             </div>

@@ -12,9 +12,12 @@ export default function Footer() {
         </span>
 
         <div className={styles.grid}>
-          <TransitionLink href="/contact" className={`${styles.glass} ${styles.contact}`}>
+          <a
+            href="mailto:arekverbakelbusiness@gmail.com"
+            className={`${styles.glass} ${styles.contact}`}
+          >
             <span>Contact</span>
-          </TransitionLink>
+          </a>
           <TransitionLink
             href="/portfolio"
             className={`${styles.glass} ${styles.portfolio}`}
@@ -29,7 +32,9 @@ export default function Footer() {
           </TransitionLink>
           {/* Linkedin is extern, geen paginatransitie nodig */}
           <Link
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/arek-verbakel-91885128a/"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`${styles.glass} ${styles.linkedin}`}
           >
             <span>Linkedin</span>
