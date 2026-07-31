@@ -17,9 +17,6 @@ export default function PortfolioPage() {
         </SplitReveal>
         <div className={styles.headerText}>
           <SplitReveal as="h1">PORTFOLIO</SplitReveal>
-          <SplitReveal as="span" className={styles.year}>
-            &apos;26
-          </SplitReveal>
         </div>
       </div>
 

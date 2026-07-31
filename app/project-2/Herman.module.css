@@ -13,7 +13,7 @@
 .title {
   text-align: center;
   color: var(--color-white);
-  font-size: 131px;
+  font-size: 92px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.05em;
@@ -40,7 +40,7 @@
   color: var(--color-white);
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .metaYear {
@@ -102,7 +102,7 @@
 
 @media (max-width: 640px) {
   .title {
-    font-size: 54px;
+    font-size: 40px;
     margin-bottom: calc(var(--gap) / 1.5);
   }
 

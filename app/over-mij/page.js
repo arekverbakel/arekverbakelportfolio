@@ -1,5 +1,4 @@
 import SplitReveal from "@/components/SplitReveal";
-import MagneticButton from "@/components/MagneticButton";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/projects";
 import styles from "./OverMij.module.css";
@@ -95,9 +94,6 @@ export default function OverMijPage() {
         </SplitReveal>
         <div className={styles.portfolioHeader}>
           <SplitReveal as="h2">PORTFOLIO</SplitReveal>
-          <SplitReveal as="span" className={styles.year}>
-            &apos;26
-          </SplitReveal>
         </div>
 
         <div className={styles.grid}>
@@ -105,20 +101,6 @@ export default function OverMijPage() {
             <ProjectCard project={project} key={project.slug} />
           ))}
         </div>
-      </section>
-
-      {/* ---------- SAMENWERKEN? ---------- */}
-      <section className={`container ${styles.cta}`}>
-        <SplitReveal as="h2" className={styles.ctaTitle}>
-          Samenwerken?
-        </SplitReveal>
-        <MagneticButton
-          href="mailto:arekverbakelbusiness@gmail.com"
-          className={styles.ctaButton}
-          strength={0.4}
-        >
-          Contact opnemen
-        </MagneticButton>
       </section>
     </>
   );

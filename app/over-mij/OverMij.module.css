@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr minmax(280px, 341px);
   gap: calc(var(--gap) * 2);
-  align-items: start;
+  align-items: stretch;
   padding-top: 48px;
   padding-bottom: var(--section-padding-y);
 }
@@ -24,7 +24,6 @@
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--color-light);
-  aspect-ratio: 341 / 506;
 }
 
 .aboutPhoto img {
@@ -37,6 +36,9 @@
 @media (max-width: 640px) {
   .about {
     grid-template-columns: 1fr;
+  }
+  .aboutPhoto {
+    aspect-ratio: 341 / 506;
   }
   .aboutText h2 {
     font-size: 16px;
@@ -63,7 +65,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.05em;
-  margin-bottom: var(--gap);
+  margin-bottom: 8px; /* dicht tegen het eerste lijntje, zoals in Figma */
 }
 
 .panel {
@@ -74,11 +76,11 @@
 
 .row {
   padding: var(--gap) 0;
-  border-bottom: 2px solid #d9d9d9;
+  border-bottom: 3px solid #d9d9d9;
 }
 
 .row:first-child {
-  border-top: 2px solid #d9d9d9;
+  border-top: 3px solid #d9d9d9;
 }
 
 .rowTop {
@@ -109,7 +111,7 @@
 }
 
 .rowDescription {
-  color: #d9d9d9;
+  color: var(--color-white);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
@@ -129,6 +131,10 @@
   }
   .rowDescription {
     font-size: 14px;
+  }
+  .row,
+  .row:first-child {
+    border-width: 2px;
   }
 }
 
@@ -187,43 +193,3 @@
   }
 }
 
-/* ================= SAMENWERKEN? ================= */
-.cta {
-  padding-bottom: var(--section-padding-y);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--gap);
-}
-
-.ctaTitle {
-  font-size: 80px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
-  color: var(--color-darkest);
-}
-
-.ctaButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-darkest);
-  color: var(--color-white);
-  font-size: 20px;
-  font-weight: 600;
-  padding: 16px 28px;
-  border-radius: 25px;
-  white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .ctaTitle {
-    font-size: 40px;
-  }
-  .ctaButton {
-    font-size: 16px;
-    padding: 13px 22px;
-  }
-}

@@ -54,7 +54,7 @@
   display: grid;
   grid-template-columns: 1fr minmax(260px, 341px);
   gap: calc(var(--gap) * 2);
-  align-items: start;
+  align-items: stretch;
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
 }
@@ -84,7 +84,6 @@
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--color-light);
-  aspect-ratio: 341 / 506;
 }
 
 .aboutPhoto img {
@@ -98,6 +97,9 @@
 @media (max-width: 640px) {
   .about {
     grid-template-columns: 1fr;
+  }
+  .aboutPhoto {
+    aspect-ratio: 341 / 506;
   }
 }
 
@@ -138,8 +140,8 @@
 .viewMore {
   display: block;
   text-align: center;
-  margin-top: calc(var(--gap) * 2);
-  margin-bottom: calc(var(--gap) * 2);
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
   font-size: clamp(16px, calc(12.69px + 0.884vw), 24px);
   font-weight: 600;
 }
