@@ -1,4 +1,5 @@
 import SplitReveal from "@/components/SplitReveal";
+import TransitionLink from "@/components/TransitionLink";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/projects";
 import styles from "./OverMij.module.css";
@@ -89,9 +90,6 @@ export default function OverMijPage() {
 
       {/* ---------- PORTFOLIO PREVIEW ---------- */}
       <section className={`container ${styles.portfolio}`}>
-        <SplitReveal as="p" className={styles.range}>
-          [2024-2026]
-        </SplitReveal>
         <div className={styles.portfolioHeader}>
           <SplitReveal as="h2">PORTFOLIO</SplitReveal>
         </div>
@@ -101,6 +99,10 @@ export default function OverMijPage() {
             <ProjectCard project={project} key={project.slug} />
           ))}
         </div>
+
+        <TransitionLink href="/" className={styles.back}>
+          <SplitReveal as="span">Terug naar home →</SplitReveal>
+        </TransitionLink>
       </section>
     </>
   );
