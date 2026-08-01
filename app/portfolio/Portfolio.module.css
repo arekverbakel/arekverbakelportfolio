@@ -5,6 +5,8 @@
 
 .header {
   margin-bottom: 0;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
 }
 
 .range {
