@@ -102,7 +102,9 @@
     grid-template-columns: 1fr;
   }
   .aboutPhoto {
-    aspect-ratio: 341 / 506;
+    aspect-ratio: unset;
+    height: 0;
+    padding-top: 148.4%; /* 506/341 — betrouwbaarder dan aspect-ratio in combinatie met grid-stretch */
   }
 }
 

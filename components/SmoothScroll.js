@@ -29,8 +29,17 @@ export default function SmoothScroll({ children }) {
   // Bij elke paginawissel: begin bovenaan, niet halverwege of onderaan.
   // (ScrollSmoother houdt zijn eigen scrollpositie bij, dus de normale
   // Next.js scroll-restore werkt hier niet vanzelf.)
+  //
+  // Ook: ScrollTrigger moet ververst worden na een paginawissel, anders
+  // gebruikt hij nog de posities/hoogte van de VORIGE pagina — daardoor
+  // vuurden de tekst-animaties (SplitReveal) niet af totdat je de pagina
+  // handmatig herlaadt.
   useEffect(() => {
     smootherRef.current?.scrollTo(0, false);
+    const id = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+    return () => cancelAnimationFrame(id);
   }, [pathname]);
 
   return (

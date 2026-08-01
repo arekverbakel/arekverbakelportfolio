@@ -72,15 +72,17 @@ export default function OverMijPage() {
           <div className={styles.panel}>
             {TIMELINE.map((item) => (
               <div className={styles.row} key={item.title}>
-                <div className={styles.rowTop}>
-                  <SplitReveal as="h3" className={styles.rowTitle}>
-                    {item.title}
-                  </SplitReveal>
+                <div className={styles.rowGrid}>
+                  <div className={styles.rowLeft}>
+                    <SplitReveal as="h3" className={styles.rowTitle}>
+                      {item.title}
+                    </SplitReveal>
+                    <p className={styles.rowRole}>{item.role}</p>
+                  </div>
                   <SplitReveal as="span" className={styles.rowPeriod}>
                     {item.period}
                   </SplitReveal>
                 </div>
-                <p className={styles.rowRole}>{item.role}</p>
                 <SplitReveal as="p" className={styles.rowDescription}>
                   {item.description}
                 </SplitReveal>
