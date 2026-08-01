@@ -96,8 +96,8 @@
   text-align: center;
   font-size: clamp(16px, 1.6vw, 24px);
   font-weight: 600;
-  margin-top: calc(var(--gap) * 2);
-  margin-bottom: calc(var(--gap) * 2);
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
 }
 
 @media (max-width: 640px) {

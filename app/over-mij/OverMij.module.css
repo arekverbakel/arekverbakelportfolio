@@ -138,6 +138,12 @@
 }
 
 @media (max-width: 640px) {
+  .dark {
+    padding-top: 20px;
+  }
+  .titleBand {
+    min-height: 56px;
+  }
   .ervaringenTitle {
     font-size: 40px;
   }
@@ -204,8 +210,8 @@
 .back {
   display: block;
   text-align: center;
-  margin-top: calc(var(--gap) * 2);
-  margin-bottom: calc(var(--gap) * 2);
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
   font-size: 24px;
   font-weight: 600;
   color: var(--color-darkest);
