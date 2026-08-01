@@ -1,6 +1,6 @@
 .footer {
   background: var(--color-white);
-  margin-top: var(--section-padding-y);
+  margin-top: var(--gap);
 }
 
 .wrap {
