@@ -62,13 +62,21 @@
   padding: 32px var(--gap) var(--gap);
 }
 
+.titleBand {
+  display: flex;
+  align-items: center;
+  min-height: 130px;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+
 .ervaringenTitle {
   color: var(--color-white);
   font-size: 80px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.05em;
-  margin-bottom: 8px; /* dicht tegen het eerste lijntje, zoals in Figma */
+  margin-top: -0.15em; /* iets hoger dan precies gecentreerd */
 }
 
 .panel {
@@ -133,7 +141,7 @@
     font-size: 12px;
   }
   .rowDescription {
-    font-size: 14px;
+    display: none;
   }
   .row,
   .row:first-child {

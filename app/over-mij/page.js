@@ -25,14 +25,14 @@ const TIMELINE = [
   },
   {
     title: "Stage Studio Giftig",
-    role: "MBO 4 Diploma",
+    role: "Grafisch Designer",
     period: "2024 - 2025",
     description:
       "Tijdens mijn stage bij Studio Giftig werkte ik mee aan grafische ontwerpen en ondersteunde ik het team bij verschillende creatieve projecten.",
   },
   {
     title: "Stage Vindkracht13",
-    role: "MBO 4 Diploma",
+    role: "Mediavormgever",
     period: "2023 - 2024",
     description:
       "Werkte aan verschillende websites, logo's en huisstijlen, en ondersteunde bij het ontwikkelen van visuele content en videobewerking.",
@@ -63,9 +63,11 @@ export default function OverMijPage() {
       {/* ---------- ERVARINGEN ---------- */}
       <section className={`container ${styles.experienceWrap}`}>
         <div className={styles.dark}>
-          <SplitReveal as="h2" className={styles.ervaringenTitle}>
-            ERVARINGEN
-          </SplitReveal>
+          <div className={styles.titleBand}>
+            <SplitReveal as="h2" className={styles.ervaringenTitle}>
+              ERVARINGEN
+            </SplitReveal>
+          </div>
 
           <div className={styles.panel}>
             {TIMELINE.map((item) => (
