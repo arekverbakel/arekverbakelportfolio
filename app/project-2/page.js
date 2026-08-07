@@ -13,7 +13,6 @@ const GALLERY = [
   { src: "/images/herman-schets-3.png", alt: "Herman — schets 3" },
   { src: "/images/herman-schets-4.png", alt: "Herman — schets 4" },
   { src: "/images/herman-schets-5.png", alt: "Herman — schets 5" },
-  { src: "/images/herman-schets-6.png", alt: "Herman — schets 6" },
   { src: "/images/herman-schets-8.png", alt: "Herman — schets 8" },
 ];
 
